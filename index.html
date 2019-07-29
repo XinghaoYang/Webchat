@@ -96,7 +96,7 @@
 <script>
   WebChat.default.init({
     selector: "#webchat",
-    initPayload: "/story_greet",
+    initPayload: "/get_started",
     interval: 1000, // 1000 ms between each message
     customData: {"userId": "123"}, // arbitrary custom data. Stay minimal as this will be added to the socket
     socketUrl: "https://6f40b336.ngrok.io",
@@ -117,10 +117,9 @@
           height: 200,
         }
       },
-      storage: "session"
+      storage: "local"
     }
-  });
-  WebChat.show();
+  })
 </script>
 
 </table>
