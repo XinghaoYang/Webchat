@@ -122,35 +122,6 @@
   })
 </script>
 
-import { Widget } from 'rasa-webchat';
-function CustomWidget = () => {
-  return (
-    <Widget
-      interval={2000}
-      initPayload={"/get_started"}
-      socketUrl={"http://localhost:5005"}
-      socketPath={"/socket.io/"}
-      customData: {{"userId": "123"}}, // arbitrary custom data. Stay minimal as this will be added to the socket
-      title={"Title"}
-      inputTextFieldHint={"Type a message..."}
-      connectingText={"Waiting for server..."}
-      hideWhenNotConnected
-      embedded={true}
-      openLauncherImage="myCustomOpenImage.png"
-      closeLauncherImage="myCustomCloseImage.png"
-      params={{
-        images: {
-          dims: {
-            width: 300,
-            height: 200
-          }
-        },
-        storage: "local"
-      }}
-    />
-  )
-}
-
 </table>
 </body>
 </html>
