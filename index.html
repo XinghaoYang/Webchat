@@ -100,9 +100,12 @@
     (e.onload = () => {
       window.WebChat.default(
         {
-          customData: { language: "en" },
+          initPayload={"/get_started"},
+	  customData: { language: "en" },
           socketUrl: "https://f918782f2553.ngrok.io",
 	  socketPath: "/socket.io/",
+	  title: "FEIT Course Assistant",
+	  subtitle: "Welcome!",
           // add other props here
         },
         null
