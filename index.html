@@ -91,35 +91,25 @@
 </td>
 </tr>
 
-<div id="webchat"/>
-<script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"></script>
-<script>
-  WebChat.default.init({
-    selector: "#webchat",
-    initPayload: "/get_started",
-    interval: 1, // 1000 ms between each message
-    customData: {"userId": "123"}, // arbitrary custom data. Stay minimal as this will be added to the socket
-    socketUrl: "https://c0c20d0c.ngrok.io",
-    socketPath: "/socket.io/",
-    title: "FEIT Course Assistant",
-    subtitle: "Welcome!",
-    inputTextFieldHint: "Type a message...",
-    connectingText: "Waiting for UTS server...",
-    hideWhenNotConnected: false,
-    fullScreenMode: false,
-    profileAvatar: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d6/UTS_emblem.png/150px-UTS_emblem.png",
-    openLauncherImage: 'myCustomOpenImage.png',
-    closeLauncherImage: 'myCustomCloseImage.png',
-    params: {
-      images: {
-        dims: {
-          width: 300,
-          height: 200,
-        }
-      },
-      storage: "local"
-    }
-  })
+<script>!(function () {
+  let e = document.createElement("script"),
+    t = document.head || document.getElementsByTagName("head")[0];
+  (e.src =
+    "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+    (e.async = !0),
+    (e.onload = () => {
+      window.WebChat.default(
+        {
+          customData: { language: "en" },
+          socketUrl: "https://c0c20d0c.ngrok.io",
+		hideWhenNotConnected: false,
+          // add other props here
+        },
+        null
+      );
+    }),
+    t.insertBefore(e, t.firstChild);
+})();
 </script>
 
 </table>
